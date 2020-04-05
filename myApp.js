@@ -181,7 +181,7 @@ app.use(helmet.noCache())
 app.use(helmet.contentSecurityPolicy({
   directives: {
     defaultSrc: ["'self'"],
-    styleSrc: ["'self'", 'https://cdn.hyperdev.com', 'https://hyperdev.com']
+    styleSrc: ["'self'", 'https://cdn.hyperdev.com', 'https://hyperdev.com', 'https://cdn.hyperdev.com/us-east-1%3A52a203ff-088b-420f-81be-45bf559d01b1%2Ffavicon.ico']
   }
 }))
 
