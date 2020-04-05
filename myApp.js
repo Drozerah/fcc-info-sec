@@ -181,7 +181,7 @@ app.use(helmet.noCache())
 app.use(helmet.contentSecurityPolicy({
   directives: {
     defaultSrc: ["'self'"],
-    styleSrc: ["'self'", "'trusted-cdn.com'", "'https://cdn.hyperdev.com'"]
+    styleSrc: ["'self'", 'trusted-cdn.com']
   }
 }))
 
