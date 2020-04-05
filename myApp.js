@@ -31,7 +31,7 @@ const helmet = require('helmet')
 
 // Use `helmet.hidePoweredBy()``
 
-
+app.use(helmet.hidePoweredBy())
 
 /** 3) Mitigate the risk of clickjacking - `helmet.frameguard()` */
 
