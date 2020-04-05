@@ -192,19 +192,19 @@ app.use(helmet.contentSecurityPolicy({
 // but these can be enabled if necessary. You can also disable or 
 // set any other middleware individually, using a configuration object.
 
-// // - Example - 
-// app.use(helmet({
-//   frameguard: {              // configure
-//     action: 'deny'
-//   },
-//   contentSecurityPolicy: {   // enable and configure
-//    directives: {
-//      defaultSrc: ["'self'"],
-//      styleSrc: ['style.com'],
-//    }
-//   },
-//  dnsPrefetchControl: false   // disable
-// }))
+// - Example - 
+app.use(helmet({
+  frameguard: {              // configure
+    action: 'deny'
+  },
+  contentSecurityPolicy: {   // enable and configure
+   directives: {
+     defaultSrc: ["'self'"],
+     styleSrc: ['style.com'],
+   }
+  },
+ dnsPrefetchControl: false   // disable
+}))
 
 // We introduced each middleware separately, for teaching purpose, and for
 // ease of testing. Using the 'parent' `helmet()` middleware is easiest, and
