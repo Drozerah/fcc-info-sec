@@ -178,7 +178,12 @@ app.use(helmet.noCache())
 // in the `"'self'"` keyword, the single quotes are part of the keyword itself, 
 // so it needs to be enclosed in **double quotes** to be working.
 
-
+app.use(helmet.contentSecurityPolicy({
+  directives: {
+    defaultSrc: ["'self'"],
+    styleSrc: ["'self'", 'https://cdn.hyperdev.com']
+  }
+}))
 
 /** TIP: */ 
 
